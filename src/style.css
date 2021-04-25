@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1b6d85;
+}
+.wrapper {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .guide{
+    margin-bottom: 100px;
+    background-color: #ccc;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow:  0 0 12px 3px #000;
+}
+
+.guide-info{
+    margin-bottom: 20px;
+}
+
+.forms {
+    display: flex;
+}
+
+.wrapper .guide p{
+    margin-bottom: 15px;
+}
+.filter-form{
+    margin-right: 50px;
+}
+.filter-form, .add-form{
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+
+.filter-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-form form .filter-block-area{
+    position: relative;
+}
+
+.filter-form p, .add-form p{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.filter-form form input{
+    background-color: transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 5px 10px;
+    z-index: 2;
+}
+
+.filter-form form input[type=submit], .add-form form input[type=submit]{
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.add-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form input{
+    margin-bottom: 30px;
+}
+
+.filter-form {
+    position: relative;
+}
+
+.add-block-area{
+    position: relative;
+}
+
+.add-block-area select {
+    margin-bottom: 20px;
+}
+
+.filter-block-area{
+    margin-bottom: 30px;
+}
+
+.filter-form input, .add-form input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+.showAll{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.filter-form label, .add-form label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.filter-form input:focus ~ label,
+.filter-form input:valid ~ label,
+.add-form input:focus ~ label,
+.add-form input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 14px;
+}
+
+select {
+    padding: 5px 10px;
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+select option{
+    color: #000;
+}
