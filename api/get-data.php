@@ -1,6 +1,8 @@
 <?php
 
-$pdo = new PDO('mysql:hostname=localhost;dbname=vue-test', 'root', 'root', [
+require_once 'config.php';
+
+$pdo = new PDO('mysql:hostname=' . DB_HOST . ';dbname=vue-test', DB_USER, DB_PASS, [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 ]);
