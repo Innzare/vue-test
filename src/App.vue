@@ -89,7 +89,7 @@ export default {
     showAll() {
       this.isShowAll = !this.isShowAll;
       if(this.isShowAll){
-        fetch(`./api/get-data.php`)
+        fetch(`/api/get-data.php`)
           .then(resp => resp.json())
           .then(data => this.data = data);
       }else{
@@ -104,7 +104,7 @@ export default {
       }
       const { name, department, phone } = this;
       if (name || department || phone) {
-        fetch(`./api/get-data.php?name=${name}&department=${department}&phone=${phone}`)
+        fetch(`/api/get-data.php?name=${name}&department=${department}&phone=${phone}`)
           .then(resp => resp.json())
           .then(data => this.data = data);
       }
@@ -118,7 +118,7 @@ export default {
         alert('Заполните все поля для добавления');
         return;
       }
-      fetch('./api/set-data.php', {
+      fetch('/api/set-data.php', {
         method: 'POST',
         body: JSON.stringify({
           name: this.addName,
